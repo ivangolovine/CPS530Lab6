@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City and Province</title>
+
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        text-align: center;
+        background-color: bisque;
+    }
+    #main {
+	        height: auto;
+     	    width: 600px;
+     	    margin: 10px auto;
+     	    background: white;
+     	    padding: 1px;
+     	    box-shadow: 0 0 10px rgba(0,0,0,.1);
+     	    border-radius: 17px;
+	        transition: ease all 0.25s;
+        }
+    .divider{
+        width:5px;
+        height:auto;
+        display:inline-block;
+}  
+</style>
+</head>
+<body>
+    <div id="main">
+        <form action="https://www2.cs.ryerson.ca/~igolovin/cgi-bin/lab6ruby.cgi" method="post">
+            <label for="Citname">City Name:</label>
+            <input type="text" id="Citname" name="Citname" autofocus placeholder="Toronto">
+            <br><br>
+            <label for="Pname">Province/State:</label>
+            <input type="text" id="Pname" name="Pname" autofocus placeholder="Ontario">
+            <br><br>
+            <label for="Conname">County Name:</label>
+            <input type="text" id="Conname" name="Conname" autofocus placeholder="Country">
+            <br><br>
+            <label for="Pop">Population:</label>
+            <input type="number" id="Pop" name="Pop" autofocus placeholder="2000">
+            <br><br>
+            <label for="Pict">Picture Url</label>
+            <input type="url" id="Pict" name="Pict" autofocus placeholder="https://wallpaperaccess.com/full/427393.jpg">
+            <!-- Default button -->
+            <br><br>
+            <input type="submit" value="Ruby Version">
+            <!-- Space between buttons -->
+            <div class="divider"></div>
+    <!-- This button will post to the custom URL of the formaction attribute-->
+            <input type="submit" formaction="https://www2.cs.ryerson.ca/~igolovin/cgi-bin/lab6pyth.cgi" value="Python Version">
+        </form>
+    </div>
+</body>
+</html>
